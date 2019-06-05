@@ -8,18 +8,38 @@ namespace CustomListProject
 {
     public class CustomList<T>
     {
-        public List<T> customList = new List<T>();
-        
-        public bool Compare(T firstValue, T secondValue)
+        private T[] testList = new T[4];
+        public T this[int i]
         {
-            if (firstValue.Equals(secondValue))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            get { return testList[i]; }
+            set { testList[i] = value; }
         }
+        private T count;
+        public T Count
+        {
+            get { return count; }
+        }
+        private T capacity;
+        public T Capacity
+        {
+            get { return capacity; }
+        }
+
+
+   
+
+
+        public void Add(T item)
+        {
+            
+        }
+
+
+
+
+
+
     }
+
+
 }
