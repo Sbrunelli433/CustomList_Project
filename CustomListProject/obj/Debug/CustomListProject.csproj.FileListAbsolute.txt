@@ -9,3 +9,6 @@ C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\obj\Debu
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\obj\Debug\CustomListProject.csproj.CoreCompileInputs.cache
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\obj\Debug\CustomListProject.exe
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\obj\Debug\CustomListProject.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\bin\Debug\CustomListProject.exe.config
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\bin\Debug\CustomListProject.exe
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomListProject\bin\Debug\CustomListProject.pdb

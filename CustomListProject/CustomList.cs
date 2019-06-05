@@ -8,6 +8,8 @@ namespace CustomListProject
 {
     public class CustomList<T>
     {
+        public List<T> customList = new List<T>();
+        
         public bool Compare(T firstValue, T secondValue)
         {
             if (firstValue.Equals(secondValue))

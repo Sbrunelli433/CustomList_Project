@@ -17,6 +17,9 @@ namespace CustomListProject
             CustomList<string> genericStringComparer = new CustomList<string>();
             bool bestTeamEver = genericStringComparer.Compare("packers", "packers");
 
+            CustomList<double> genericDoubleComparer = new CustomList<double>();
+            bool doubleComparer = genericDoubleComparer.Compare(4, 4);
+
         }
     }
 }
