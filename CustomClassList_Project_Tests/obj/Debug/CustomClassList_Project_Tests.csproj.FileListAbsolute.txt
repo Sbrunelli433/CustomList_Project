@@ -12,3 +12,7 @@ C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomClassList_Proje
 C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.csproj.CopyComplete
 C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.dll
 C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.csprojAssemblyReference.cache
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.csproj.CoreCompileInputs.cache
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.pdb

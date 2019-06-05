@@ -4,14 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace CustomListProject
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("asdf");
-            Console.ReadLine();
+            CustomList<int> genericIntComparer = new CustomList<int>();
+            bool result = genericIntComparer.Compare(5, 5);
+
+            CustomList<string> genericStringComparer = new CustomList<string>();
+            bool bestTeamEver = genericStringComparer.Compare("packers", "packers");
 
         }
     }
