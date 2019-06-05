@@ -8,7 +8,7 @@ namespace CustomListProject
 {
     public class GenericCustomList<T>
     {
-        List<T> CustomList = new List<T>;
+        List<T> customList = new List<T>();
 
     }
 }
