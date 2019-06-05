@@ -11,11 +11,25 @@ namespace CustomListProject
         private T[] testList = new T[4];
         public T this[int i]
         {
-            get { return testList[i]; }
-            set { testList[i] = value; }
+            get
+            {
+                if (count > 4)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                return testList[i];
+            }
+            set
+            {
+                if (count > 4)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                testList[i] = value;
+            }
         }
-        private T count;
-        public T Count
+        private int count;
+        public int Count
         {
             get { return count; }
         }

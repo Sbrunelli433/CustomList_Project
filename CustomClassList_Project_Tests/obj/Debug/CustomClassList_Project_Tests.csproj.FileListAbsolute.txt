@@ -16,3 +16,16 @@ C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Te
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.csproj.CoreCompileInputs.cache
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.dll
 C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\CustomClassList_Project_Tests.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\CustomClassList_Project_Tests.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\CustomListProject.exe
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\CustomListProject.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\CustomListProject.exe.config
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\brune\Desktop\DCC\Week_05\CustomList_Project\CustomClassList_Project_Tests\obj\Debug\CustomClassList_Project_Tests.csproj.CopyComplete

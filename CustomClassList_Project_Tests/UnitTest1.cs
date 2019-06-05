@@ -41,11 +41,17 @@ namespace CustomClassList_Project_Tests
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            int expected = 6;
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(2);
+            testList.Add(2);
+            testList.Add(2);
+            testList.Add(2);
+            testList.Add(2);
+            int expected = 2;
             int actual;
             //act
-            testList.Add(expected);
-            actual = testList[5];
+            actual = testList[7];
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -57,11 +63,20 @@ namespace CustomClassList_Project_Tests
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
+            testList.Add(1);
+            testList.Add(2);
+            testList.Add(3);
+            testList.Add(4);
+            testList.Add(5);
+            testList.Add(6);
+            testList.Add(7);
+            testList.Add(8);
+            testList.Add(9);
+            testList.Add(10);
             int expected = 11;
             int actual;
             //act
-            testList.Add(expected);
-            actual = testList[9];
+            actual = testList[10];
             //assert
             Assert.AreEqual(expected, actual);
         }
@@ -90,13 +105,16 @@ namespace CustomClassList_Project_Tests
             string ivysaur = "Ivysaur";
             string venusaur = "Venusaur";
             string actual;
+            
+
             //act
             testList.Add(bulbasaur);
             testList.Add(ivysaur);
             testList.Add(venusaur);
-            actual = testList[0, 1, 2];
+            actual = testList[2];
+
             //assert
-            Assert.AreEqual(bulbasaur, ivysaur, venusaur, actual);
+            Assert.AreSame(bulbasaur, ivysaur, venusaur, actual);
         }
 
     }
