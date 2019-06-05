@@ -1,0 +1,7 @@
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\bin\Debug\CustomListProject.exe.config
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\bin\Debug\CustomListProject.exe
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\bin\Debug\CustomListProject.pdb
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\obj\Debug\CustomListProject.csprojAssemblyReference.cache
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\obj\Debug\CustomListProject.csproj.CoreCompileInputs.cache
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\obj\Debug\CustomListProject.exe
+C:\Users\brune\Desktop\DCC\Week_05\CustomClassList_Project\CustomListProject\obj\Debug\CustomListProject.pdb
