@@ -36,6 +36,7 @@ namespace CustomClassList_Project_Tests
             Assert.AreEqual(expected, actual);
         }
         // If we add an item to a list that already has 5 things in it,
+        [TestMethod]
         public void Add_AddItemToPopulatedList_ListHasFiveItems()
         {
             //arrange
@@ -51,6 +52,7 @@ namespace CustomClassList_Project_Tests
         // ADDITIONAL TEST IDEA:
 
         // does the newly added item go to the correct spot? (index 5?)
+        [TestMethod]
         public void Add_AddItemToPopulatedList_ListHasTenItems()
         {
             //arrange
@@ -65,7 +67,7 @@ namespace CustomClassList_Project_Tests
         }
 
         //add a string to the array
-
+        [TestMethod]
         public void Add_AddStringToTheList_Pokemon()
         {
             //arrange
@@ -78,8 +80,8 @@ namespace CustomClassList_Project_Tests
             //assert
             Assert.AreEqual(expected, actual);
         }
-
         //add several pokemon to the pokedex
+        [TestMethod]
         public void Add_AddThreeStringsToTheEmptyList_FirstThreePokemon()
         {
             //arrange
