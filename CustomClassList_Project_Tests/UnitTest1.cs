@@ -51,30 +51,51 @@ namespace CustomClassList_Project_Tests
         // ADDITIONAL TEST IDEA:
 
         // does the newly added item go to the correct spot? (index 5?)
-        public void Add_AddItemToIndiceFive_ItemGoesToFive()
+        public void Add_AddItemToPopulatedList_ListHasTenItems()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            int expected = 6;
+            int expected = 11;
             int actual;
             //act
             testList.Add(expected);
-            actual = testList[5];
+            actual = testList[9];
             //assert
             Assert.AreEqual(expected, actual);
         }
 
-        public void Add_SwapIndicies_FromZeroToThree()
+        //add a string to the array
+
+        public void Add_AddStringToTheList_Pokemon()
         {
             //arrange
-            CustomList<int> testList = new CustomList<int>();
-            int expected;
-            int actual;
+            CustomList<string> testList = new CustomList<string>();
+            string expected = "Bulbasaur";
+            string actual;
             //act
-            testList.AddInts(expected, );
-            actual = testList[1];
+            testList.Add(expected);
+            actual = testList[0];
             //assert
             Assert.AreEqual(expected, actual);
         }
+
+        //add several pokemon to the pokedex
+        public void Add_AddThreeStringsToTheEmptyList_FirstThreePokemon()
+        {
+            //arrange
+            CustomList<string> testList = new CustomList<string>();
+            string bulbasaur = "Bulbasaur";
+            string ivysaur = "Ivysaur";
+            string venusaur = "Venusaur";
+            string actual;
+            //act
+            testList.Add(bulbasaur);
+            testList.Add(ivysaur);
+            testList.Add(venusaur);
+            actual = testList[0, 1, 2];
+            //assert
+            Assert.AreEqual(bulbasaur, ivysaur, venusaur, actual);
+        }
+
     }
 }
