@@ -13,15 +13,16 @@ namespace CustomListProject
         {
             get
             {
-                if (count > 4)
+                if (count > capacity)
                 {
+                    capacity = capacity * 2;
                     throw new IndexOutOfRangeException();
                 }
                 return testArray[i];
             }
             set
             {
-                if (count > 4)
+                if (count > capacity)
                 {
                     throw new IndexOutOfRangeException();
                 }
