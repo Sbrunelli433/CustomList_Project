@@ -170,6 +170,24 @@ namespace CustomClassList_Project_Tests
         //    //assert
         //    Assert.AreEqual(expected, actual);
         //}
+        [TestMethod]
+        public void Remove_RemoveFirstItemInList_IndexZero()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            testList.Add(0);
+            testList.Add(1);
+            testList.Add(2);
+            int expected = 1;
+            int actual;
 
+
+            //act
+            testList.Remove(1);
+            actual = testList.Count;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

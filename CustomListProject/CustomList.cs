@@ -29,29 +29,6 @@ namespace CustomListProject
                 testArray[i] = value;
             }
         }
-        //compare Count to [i];
-
-        //private T[] pokemonTestList = new T[9](testList);
-        //public T pokemonTestList[int i]
-        //{
-        //    get
-        //    {
-        //        if (count > 9)
-        //        {
-        //            throw new IndexOutOfRangeException();
-        //        }
-        //        return testList[i];
-        //    }
-        //    set
-        //    {
-        //        if (count > 9)
-        //        {
-        //            throw new IndexOutOfRangeException();
-        //        }
-        //        testList[i] = value;
-        //    }
-        //}
-
 
         private int count;
         public int Count
@@ -72,14 +49,11 @@ namespace CustomListProject
             testArray = new T[capacity];
             
         }
-        
-
 
         public void Add(T item)
         {
             // if we are about to run out of room
             // make more!
-
             if (count>=capacity)
             {
                 capacity = capacity * 2;
@@ -97,26 +71,28 @@ namespace CustomListProject
                 testArray[count] = item;
                 count++;
             }
+        }
 
-            //testArray[count] = item;
-            //count++;
-            ////Array.Resize(ref testArray, capacity++);
-
-            //if (count >= capacity)
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+        public void Remove(T item)
+        {
+            //if (count>capacity)
             //{
-            //    T[] biggerArray = new T[capacity++];
-
-
-            //    testArray = biggerArray;
+            //    for (int i = 0; i < count; i--)
+            //    {
+            //        testArray[item];
+            //    }
             //}
 
         }
 
+        //public void Insert(int index, T item)
+        //{
 
-        public void Insert(int index, T item)
-        {
-
-        }
+        //}
 
 
 

@@ -22,6 +22,9 @@ namespace CustomListProject
             test.Add(7);
             test.Add(8);
             test.Add(9);
+            test.Remove(0);
+            test.Remove(1);
+            test.Remove(2);
 
 
             //CustomList<int> genericIntComparer = new CustomList<int>();
