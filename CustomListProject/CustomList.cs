@@ -81,7 +81,7 @@ namespace CustomListProject
 
             if (count>=capacity)
             {
-                capacity++;
+                capacity = capacity * 2;
                 T[] biggerArray = new T[capacity];
                 for (int i = 0; i < count; i++)
                 {
