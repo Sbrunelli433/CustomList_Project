@@ -8,7 +8,7 @@ namespace CustomListProject
 {
     public class CustomList<T>
     {
-        private T[] testList = new T[4];
+        private T[] testArray;
         public T this[int i]
         {
             get
@@ -17,7 +17,7 @@ namespace CustomListProject
                 {
                     throw new IndexOutOfRangeException();
                 }
-                return testList[i];
+                return testArray[i];
             }
             set
             {
@@ -25,29 +25,77 @@ namespace CustomListProject
                 {
                     throw new IndexOutOfRangeException();
                 }
-                testList[i] = value;
+                testArray[i] = value;
             }
         }
+        //compare Count to [i];
+
+        //private T[] pokemonTestList = new T[9](testList);
+        //public T pokemonTestList[int i]
+        //{
+        //    get
+        //    {
+        //        if (count > 9)
+        //        {
+        //            throw new IndexOutOfRangeException();
+        //        }
+        //        return testList[i];
+        //    }
+        //    set
+        //    {
+        //        if (count > 9)
+        //        {
+        //            throw new IndexOutOfRangeException();
+        //        }
+        //        testList[i] = value;
+        //    }
+        //}
+
+
         private int count;
         public int Count
         {
             get { return count; }
         }
-        private T capacity;
-        public T Capacity
+ 
+        private int capacity;
+        public int Capacity
         {
             get { return capacity; }
         }
 
+        public CustomList()
+        {
+            count = 0;
+            capacity = 4;
+            testArray = new T[capacity];
+        }
 
-   
 
 
         public void Add(T item)
         {
-            
+            // if we are about to run out of room
+            // make more!
+
+
+            testArray[count] = item;
+            count++;
+
+            if (count > capacity)
+            {
+                T[] biggerArray = new T[capacity++];
+
+
+                testArray = biggerArray;
+            }
+
         }
 
+        public void Insert(int index, T item)
+        {
+
+        }
 
 
 
