@@ -28,6 +28,8 @@ namespace CustomListProject
 
 
 
+
+
             //CustomList<int> genericIntComparer = new CustomList<int>();
             //bool result = genericIntComparer.Compare(5, 5);
 

@@ -350,5 +350,26 @@ namespace CustomClassList_Project_Tests
             Assert.AreEqual(expected, actual);
             //expected:<Ivysaur>, actual:<Venusaur>;
         }
+        [TestMethod]
+        public void ToString_IndexZeroToString_NumberOne()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            testList.Add(1);
+            string expected = "one";
+            string actual;
+
+            //act
+            testList.Add(1);
+            testList.ToString(1);
+            actual =  "one";
+
+
+            //assert
+            Assert.AreEqual(expected, actual);
+            
+        }
+
+
     }
 }

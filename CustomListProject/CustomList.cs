@@ -70,7 +70,6 @@ namespace CustomListProject
                 testArray[count] = item;
             }
             count++;
-
         }
 
         public void Remove(T item)
@@ -91,22 +90,12 @@ namespace CustomListProject
             }
             testArray = smallerArray;
         }
-        //public void RemoveAt(int index)
-        //{
-        //    if (true)
-        //    {
 
-        //    }
-        //}
+        public virtual string ToString(int x)
+        {
+            return base.ToString();
+        }
 
-        //public override string ToString()
-        //{
-        //    return base.ToString();
-        //}
-        //public void Insert(int index, T item)
-        //{
-
-        //}
 
 
 
