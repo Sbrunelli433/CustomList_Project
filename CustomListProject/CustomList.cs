@@ -63,32 +63,43 @@ namespace CustomListProject
                     biggerArray[i] = testArray[i];
                 }
                 biggerArray[count] = item;
-                count++;
                 testArray = biggerArray;
             }
             else
             {
                 testArray[count] = item;
-                count++;
             }
+            count++;
+
         }
 
-        public override string ToString()
-        {
-            return base.ToString();
-        }
         public void Remove(T item)
         {
-            //if (count>capacity)
-            //{
-            //    for (int i = 0; i < count; i--)
-            //    {
-            //        testArray[item];
-            //    }
-            //}
-
+            T[] smallerArray = new T[capacity];
+            int j = 0;
+            for (int i = 0; i < count; i++, j++)
+            {
+                smallerArray[j] = testArray[i];
+                if (j == i)
+                {
+                    j--;
+                }
+            }
+            smallerArray[j] = item;
+            testArray = smallerArray;
         }
+        //public void RemoveAt(int index)
+        //{
+        //    if (true)
+        //    {
 
+        //    }
+        //}
+
+        //public override string ToString()
+        //{
+        //    return base.ToString();
+        //}
         //public void Insert(int index, T item)
         //{
 
