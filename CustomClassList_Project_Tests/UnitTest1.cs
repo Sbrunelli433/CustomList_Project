@@ -361,15 +361,30 @@ namespace CustomClassList_Project_Tests
 
             //act
             testList.Add(1);
-            testList.ToString(1);
+            testList.ToString();
             actual =  "one";
-
 
             //assert
             Assert.AreEqual(expected, actual);
-            
         }
+        [TestMethod]
+        public void ToString_IndexZeroToString_NumberOneFailure()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            testList.Add(1);
+            string expected = "1";
+            string actual;
 
+            //act
+            testList.Add(3);
+            actual = testList.ToString();
+            
+
+            //assert
+            Assert.AreEqual(expected, actual);
+            //expected:<1>, actual<13>;
+        }
 
     }
 }

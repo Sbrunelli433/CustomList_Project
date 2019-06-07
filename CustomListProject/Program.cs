@@ -22,9 +22,10 @@ namespace CustomListProject
             //test.Add(7);
             //test.Add(8);
             //test.Add(9);
-            test.Remove(3);
+            //test.Remove(3);
             //test.Remove(0);
             //test.Remove(2);
+            test.ToString();
 
 
 

@@ -91,10 +91,41 @@ namespace CustomListProject
             testArray = smallerArray;
         }
 
-        public virtual string ToString(int x)
+        public override string ToString()
         {
-            return base.ToString();
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < count; i++)
+            {
+
+                stringBuilder.Append(testArray[i] + " ");
+            }
+            return stringBuilder.ToString();
         }
+
+        public static CustomList<T> operator + (CustomList<T> listNumberA, CustomList<T>listNumberB)
+        {
+
+
+            listNumberA.Add(1);
+            listNumberA.Add(3);
+            listNumberA.Add(5);
+
+            listNumberB.Add(2);
+            listNumberB.Add(4);
+            listNumberB.Add(6);
+
+
+
+
+
+            return CustomList<T> = (listNumberA + listNumberB);
+
+
+
+        }
+            
+
+    }
 
 
 
@@ -103,5 +134,3 @@ namespace CustomListProject
 
     }
 
-
-}
