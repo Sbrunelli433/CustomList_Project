@@ -17,12 +17,12 @@ namespace CustomListProject
             test.Add(2);
             test.Add(3);
             test.Add(4);
-            //test.Add(5);
+            test.Add(5);
             //test.Add(6);
             //test.Add(7);
             //test.Add(8);
             //test.Add(9);
-            test.Remove(2);
+            test.Remove(3);
             //test.Remove(0);
             //test.Remove(2);
 

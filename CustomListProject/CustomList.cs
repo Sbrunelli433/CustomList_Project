@@ -79,13 +79,16 @@ namespace CustomListProject
             int j = 0;
             for (int i = 0; i < count; i++, j++)
             {
-                smallerArray[j] = testArray[i];
-                if (j == i)
+                if (testArray[i].Equals(item))
                 {
+                    smallerArray[j] = testArray[i + 1];
                     j--;
                 }
+                else
+                {
+                    smallerArray[j] = testArray[i];
+                }
             }
-            smallerArray[j] = item;
             testArray = smallerArray;
         }
         //public void RemoveAt(int index)
