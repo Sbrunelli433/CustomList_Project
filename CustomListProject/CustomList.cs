@@ -9,6 +9,7 @@ namespace CustomListProject
     public class CustomList<T>
     {
         private T[] testArray;
+  
         public T this[int i]
         {
             get
@@ -16,6 +17,7 @@ namespace CustomListProject
                 if (count > capacity)
                 {
                     capacity = capacity * 2;
+
                     throw new IndexOutOfRangeException();
                 }
                 return testArray[i];
@@ -41,13 +43,40 @@ namespace CustomListProject
         {
             get { return capacity; }
         }
+        private T[] listC;
+        //public T this[int j]
+        //{
+        //    get
+        //    {
+        //        if (count > capacityC)
+        //        {
+        //            throw new IndexOutOfRangeException();
+        //        }
+        //        return listC[j];
+        //    }
+        //    set
+        //    {
+        //        if (count > capacityC)
+        //        {
+        //            throw new IndexOutOfRangeException();
+        //        }
+        //        listC[j] = value;
+        //    }
+        //}
+        private int capacityC;
+        public int CapacityC
+        {
+            get { return capacityC; }
+        }
 
         public CustomList()
         {
             count = 0;
             capacity = 4;
+            //capacityC = 6;
             testArray = new T[capacity];
-            
+            //listC = new T[capacityC];
+
         }
 
         public void Add(T item)
@@ -102,28 +131,15 @@ namespace CustomListProject
             return stringBuilder.ToString();
         }
 
-        public static CustomList<T> operator + (CustomList<T> listNumberA, CustomList<T>listNumberB)
+
+        public static CustomList<T> operator + (CustomList<T> one, CustomList<T>two)
         {
-
-
-            listNumberA.Add(1);
-            listNumberA.Add(3);
-            listNumberA.Add(5);
-
-            listNumberB.Add(2);
-            listNumberB.Add(4);
-            listNumberB.Add(6);
-
-
-
-
-
-            return CustomList<T> = (listNumberA + listNumberB);
-
-
-
+            CustomList<T> result = new CustomList<T>();
+            result = one + two;
+            return result;
         }
-            
+         
+
 
     }
 
