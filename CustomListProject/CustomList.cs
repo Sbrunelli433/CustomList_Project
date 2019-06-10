@@ -9,7 +9,7 @@ namespace CustomListProject
     public class CustomList<T>
     {
         private T[] testArray;
-  
+
         public T this[int i]
         {
             get
@@ -50,54 +50,26 @@ namespace CustomListProject
         {
             get { return count; }
         }
- 
+
         private int capacity;
         public int Capacity
         {
             get { return capacity; }
         }
-        private T[] listC;
-        //public T this[int j]
-        //{
-        //    get
-        //    {
-        //        if (count > capacityC)
-        //        {
-        //            throw new IndexOutOfRangeException();
-        //        }
-        //        return listC[j];
-        //    }
-        //    set
-        //    {
-        //        if (count > capacityC)
-        //        {
-        //            throw new IndexOutOfRangeException();
-        //        }
-        //        listC[j] = value;
-        //    }
-        //}
-        private int capacityC;
-        public int CapacityC
-        {
-            get { return capacityC; }
-        }
+
 
         public CustomList()
         {
             count = 0;
             capacity = 4;
-            //capacityC = 6;
             testArray = new T[capacity];
-            //listC = new T[capacityC];
-            
-
         }
 
         public void Add(T item)
         {
             // if we are about to run out of room
             // make more!
-            if (count>=capacity)
+            if (count >= capacity)
             {
                 capacity = capacity * 2;
                 T[] biggerArray = new T[capacity];
@@ -144,24 +116,53 @@ namespace CustomListProject
             }
             return stringBuilder.ToString();
         }
-       
 
-        public static CustomList<T> operator + (CustomList<T> one, CustomList<T>two)
+        public static CustomList<T> operator + (CustomList<T> one, CustomList<T> two)
         {
-            CustomList<T> result1 = new CustomList<T>();
-            result1.one = one.one + two.one;
-            result1.two = one.two + two.two;
-            return result1;
+            CustomList<T> result = new CustomList<T>();
+
+            for (int i = 0; i < one.count; i++)
+            {
+                result.Add(one[i]);
+            }
+
+            for (int i = 0; i < two.count; i++)
+            {
+                result.Add(two[i]);
+            }
+            return result;
         }
-        public static CustomList<T> operator - (CustomList<T> one, CustomList<T> two)
+
+        public static CustomList<T> operator -(CustomList<T> one, CustomList<T> two)
         {
-            CustomList<T> result2 = new CustomList<T>();
-            result2.one = one.one - two.one;
-            result2.two = one.two - two.two;
-            return result2;
+            CustomList<T> result = new CustomList<T>();
+
+            for (int i = 0; i < one.count; i--)
+            {
+                result.Add(one[i]);
+            }
+
+            for (int i = 0; i < two.count; i--)
+            {
+                result.Add(two[i]);
+            }
+            return result;
         }
 
 
+        //zip method operator overload
+        public static CustomList<T> operatorZip(CustomList<T> one, CustomList<T> two)
+        {
+            CustomList<T> result = new CustomList<T>();
+
+            for (int i = 0; i < one.count; i++)
+            {
+                result.Add(one[i]);
+                result.Add(two[i]);
+            }
+            return result;
+
+        }
     }
 
 
@@ -169,5 +170,5 @@ namespace CustomListProject
 
 
 
-    }
+}
 

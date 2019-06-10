@@ -28,17 +28,26 @@ namespace CustomListProject
             //test.ToString();
 
 
-            List<int> one = new List<int>() { 1, 3, 5 };
-            
+            CustomList<int> one = new CustomList<int>();
+            one.Add(1);
+            one.Add(3);
+            one.Add(5);
 
-            List<int> two = new List<int>() { 2, 4, 6 };
+            CustomList<int> two = new CustomList<int>();
+            two.Add(2);
+            two.Add(4);
+            two.Add(6);
 
-            List<int> result1 = new List<int>();
+            CustomList<int> result1 = new CustomList<int>();
 
             result1 = one + two;
 
-            List<int> result2 = new List<int>();
-            result2 = result1 - one;
+
+
+            CustomList<int>.operatorZip(one, two);
+
+            //CustomList<int> result2 = new CustomList<int>();
+            //result2 = result1 - one;
 
 
 
