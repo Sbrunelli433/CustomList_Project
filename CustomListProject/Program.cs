@@ -33,35 +33,25 @@ namespace CustomListProject
             one.Add(3);
             one.Add(5);
 
+            //CustomList<int> two = new CustomList<int>();
+            //two.Add(2);
+            //two.Add(4);
+            //two.Add(6);
+
             CustomList<int> two = new CustomList<int>();
             two.Add(2);
-            two.Add(4);
+            two.Add(1);
             two.Add(6);
 
-            CustomList<int> result1 = new CustomList<int>();
+            CustomList<int> result = new CustomList<int>();
 
-            result1 = one + two;
+            result = one - two;
 
+            //result = one - two;
 
-
-            CustomList<int>.operatorZip(one, two);
-
-            //CustomList<int> result2 = new CustomList<int>();
-            //result2 = result1 - one;
+            //CustomList<int>.operatorZip(one, two);
 
 
-
-
-
-
-            //CustomList<int> genericIntComparer = new CustomList<int>();
-            //bool result = genericIntComparer.Compare(5, 5);
-
-            //CustomList<string> genericStringComparer = new CustomList<string>();
-            //bool bestTeamEver = genericStringComparer.Compare("packers", "packers");
-
-            //CustomList<double> genericDoubleComparer = new CustomList<double>();
-            //bool doubleComparer = genericDoubleComparer.Compare(4, 4);
 
         }
     }

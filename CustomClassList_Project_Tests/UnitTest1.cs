@@ -178,12 +178,12 @@ namespace CustomClassList_Project_Tests
             testList.Add(1);
             testList.Add(2);
             testList.Add(3);
-            int expected = testList[2];
+            int expected = 2;
             int actual;
 
 
             //act
-            testList.Remove(0);
+            testList.Remove(1);
             actual = testList.Count;
 
             //assert
@@ -197,7 +197,7 @@ namespace CustomClassList_Project_Tests
             testList.Add(1);
             testList.Add(2);
             testList.Add(3);
-            int expected = testList[1];
+            int expected = 3;
             int actual;
 
 
