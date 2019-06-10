@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,52 +9,69 @@ namespace CustomListProject
 {
     public class CustomList<T> : IEnumerable
     {
-
+        //member variables
         private T[] testArray;
+        private int count;
+        private int capacity;
 
         public T this[int i]
         {
             get
             {
-                if (count > capacity)
+                if (i < count && i >= 0 )
                 {
-                    capacity = capacity * 2;
-
+                    return testArray[i];
+                }
+                else
+                {
                     throw new IndexOutOfRangeException();
                 }
-                return testArray[i];
+
             }
             set
             {
-                if (count > capacity)
+                if (i <= count && i >=0 )
+                {
+                    testArray[i] = value;
+                }
+                else
                 {
                     throw new IndexOutOfRangeException();
                 }
-                testArray[i] = value;
             }
         }
 
-        private int count;
+        //properties
         public int Count
         {
             get { return count; }
         }
 
-        private int capacity;
         public int Capacity
         {
             get { return capacity; }
         }
-
-
+        //Constructor
         public CustomList()
         {
             count = 0;
             capacity = 6;
             testArray = new T[capacity];
-
         }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return (IEnumerator)GetEnumerator();
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return testArray[i];
+            }
+        }
+        //methods
         public void Add(T item)
         {
             // if we are about to run out of room
@@ -106,7 +124,6 @@ namespace CustomListProject
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 0; i < count; i++)
             {
-
                 stringBuilder.Append(testArray[i] + " ");
             }
             return stringBuilder.ToString();
@@ -120,7 +137,6 @@ namespace CustomListProject
             {
                 result.Add(one[i]);
             }
-
             for (int i = 0; i < two.count; i++)
             {
                 result.Add(two[i]);
@@ -189,33 +205,6 @@ namespace CustomListProject
             }
             return result;
         }
-
-
-        public void GetEnumerator()
-        {
-
-            throw new NotImplementedException();
-        }
-
-
-
-
-
-        //public IEnumerable GetEnumerator()
-        //{
-        //    for (int i = 0; i < count; i++)
-        //    {
-        //        yield return one[i];
-        //    }
-
-        //    throw new NotImplementedException();
-        //}
     }
-
-
-
-
-
-
 }
 

@@ -11,6 +11,7 @@ namespace CustomListProject
     {
         static void Main(string[] args)
         {
+
             //CustomList<int> test = new CustomList<int>();
 
             //test.Add(1);
@@ -29,11 +30,15 @@ namespace CustomListProject
 
 
             CustomList<int> one = new CustomList<int>();
+
+
+
             one.Add(1);
             one.Add(3);
             one.Add(5);
 
             CustomList<int> two = new CustomList<int>();
+
             two.Add(2);
             two.Add(4);
             two.Add(6);
@@ -63,9 +68,20 @@ namespace CustomListProject
             even.Add(6);
             even.Add(8);
             even.Add(10);
+            even.Add(12);
+            even.Add(14);
+
             CustomList<int>.OperatorZip(odd, even);
 
-
+            foreach (int number in even)
+            {
+                Console.WriteLine(number);
+            }
+            foreach (int number in odd)
+            {
+                Console.WriteLine(number);
+            }
+            Console.ReadLine();
 
         }
     }
