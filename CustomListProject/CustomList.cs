@@ -31,6 +31,19 @@ namespace CustomListProject
                 testArray[i] = value;
             }
         }
+        private int one;
+        public int One
+        {
+            get { return one; }
+            set { one = value; }
+        }
+
+        private int two;
+        public int Two
+        {
+            get { return two; }
+            set { two = value; }
+        }
 
         private int count;
         public int Count
@@ -76,6 +89,7 @@ namespace CustomListProject
             //capacityC = 6;
             testArray = new T[capacity];
             //listC = new T[capacityC];
+            
 
         }
 
@@ -130,15 +144,22 @@ namespace CustomListProject
             }
             return stringBuilder.ToString();
         }
-
+       
 
         public static CustomList<T> operator + (CustomList<T> one, CustomList<T>two)
         {
-            CustomList<T> result = new CustomList<T>();
-            result = one + two;
-            return result;
+            CustomList<T> result1 = new CustomList<T>();
+            result1.one = one.one + two.one;
+            result1.two = one.two + two.two;
+            return result1;
         }
-         
+        public static CustomList<T> operator - (CustomList<T> one, CustomList<T> two)
+        {
+            CustomList<T> result2 = new CustomList<T>();
+            result2.one = one.one - two.one;
+            result2.two = one.two - two.two;
+            return result2;
+        }
 
 
     }
