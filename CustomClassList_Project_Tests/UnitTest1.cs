@@ -189,8 +189,9 @@ namespace CustomClassList_Project_Tests
             //assert
             Assert.AreEqual(expected, actual);
         }
+
         [TestMethod]
-        public void Remove_RemoveFirstItemInList_IndexZeroFailure()
+        public void Remove_RemoveFirstItemInList_IndexZeroSecondTest()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -207,8 +208,8 @@ namespace CustomClassList_Project_Tests
 
             //assert
             Assert.AreEqual(expected, actual);
-            //expected:<2>, actual<3>;
         }
+
         [TestMethod]
         public void Remove_RemoveItemInList_IndexTwo()
         {
@@ -232,7 +233,7 @@ namespace CustomClassList_Project_Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_RemoveItemInList_IndexTwoFailure()
+        public void Remove_RemoveItemInList_IndexTwoSecondTest()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -242,7 +243,7 @@ namespace CustomClassList_Project_Tests
             testList.Add(4);
             testList.Add(5);
             testList.Add(6);
-            int expected = testList[3];
+            int expected = 5;
             int actual;
 
 
@@ -252,7 +253,6 @@ namespace CustomClassList_Project_Tests
 
             //assert
             Assert.AreEqual(expected, actual);
-            //expected: <4> actual: <5>;
         }
 
         [TestMethod]
@@ -278,7 +278,7 @@ namespace CustomClassList_Project_Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_RemoveItemInList_IndexFiveFailure()
+        public void Remove_RemoveItemInList_IndexFiveSecondTest()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -288,17 +288,16 @@ namespace CustomClassList_Project_Tests
             testList.Add(4);
             testList.Add(5);
             testList.Add(6);
-            int expected = testList[5];
+            int expected = 5;
             int actual;
 
 
             //act
             testList.Remove(5);
-            actual = testList[5];
+            actual = 5;
 
             //assert
             Assert.AreEqual(expected, actual);
-            //expected:<6>, actual:<0>;
         }
 
         [TestMethod]
@@ -326,7 +325,7 @@ namespace CustomClassList_Project_Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_RemovePokemonFromList_ByeBulbasaurFailure()
+        public void Remove_RemovePokemonFromList_ByeBulbasaurSecondTest()
         {
             //arrange
             CustomList<string> testList = new CustomList<string>();
@@ -339,7 +338,7 @@ namespace CustomClassList_Project_Tests
             string venusaur = "Venusaur";
             testList.Add(venusaur);
 
-            string expected = testList[1];
+            string expected = testList[2];
             string actual;
 
             //act
@@ -348,7 +347,7 @@ namespace CustomClassList_Project_Tests
 
             //assert
             Assert.AreEqual(expected, actual);
-            //expected:<Ivysaur>, actual:<Venusaur>;
+
         }
         [TestMethod]
         public void ToString_IndexZeroToString_NumberOne()
@@ -372,19 +371,255 @@ namespace CustomClassList_Project_Tests
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            testList.Add(1);
-            string expected = "1";
+            testList.Add(5);
+            string expected = "5 ";
             string actual;
 
             //act
-            testList.Add(3);
             actual = testList.ToString();
-            
 
             //assert
             Assert.AreEqual(expected, actual);
-            //expected:<1>, actual<13>;
+
         }
 
+        [TestMethod]
+        public void OverLoadPlusOperator_AddingTwoLists()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(11);
+            one.Add(33);
+            one.Add(55);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(22);
+            two.Add(44);
+            two.Add(66);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "11 33 55 22 44 66 ";
+            string actual;
+
+            //act
+            result = one + two;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
+        public void OverLoadPlusOperator_AddingTwoLists_TripleDigits()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(111);
+            one.Add(333);
+            one.Add(555);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(222);
+            two.Add(444);
+            two.Add(666);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "111 333 555 222 444 666 ";
+            string actual;
+
+            //act
+            result = one + two;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OverLoadSubtractionOperator_AddingTwoLists_RemovingListTwo()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(11);
+            one.Add(33);
+            one.Add(55);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(22);
+            two.Add(44);
+            two.Add(66);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "11 33 55 ";
+            string actual;
+
+            //act
+            result = one - two;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void OverLoadSubtractionOperator_AddingTwoLists_RemovingListOne()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(11);
+            one.Add(33);
+            one.Add(55);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(22);
+            two.Add(44);
+            two.Add(66);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "22 44 66 ";
+            string actual;
+
+            //act
+            result = two - one;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OverLoadSubtractionOperator_AddingTwoLists_DifferentSizeLists()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(11);
+            one.Add(33);
+            one.Add(55);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(22);
+            two.Add(44);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "22 44 ";
+            string actual;
+
+            //act
+            result = two - one;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void OverLoadSubtractionOperator_AddingTwoLists_ReversingOrder()
+        {
+            //arrange
+            CustomList<int> one = new CustomList<int>();
+            one.Add(11);
+            one.Add(55);
+            CustomList<int> two = new CustomList<int>();
+            two.Add(22);
+            two.Add(44);
+            two.Add(66);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "11 55 ";
+            string actual;
+
+            //act
+            result = one - two;
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ZipMethodTest_CombiningLists_NumericalOrder()
+        {
+            //arrange
+            CustomList<int> odd = new CustomList<int>();
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            CustomList<int> even = new CustomList<int>();
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "1 2 3 4 5 6 ";
+            string actual;
+            CustomList<int>.OperatorZip(odd, even);
+
+            //act
+            result = CustomList<int>.OperatorZip(odd, even);
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ZipMethodTest_CombiningLists_Duplicates()
+        {
+            //arrange
+            CustomList<int> odd = new CustomList<int>();
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            CustomList<int> even = new CustomList<int>();
+            even.Add(1);
+            even.Add(3);
+            even.Add(5);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "1 1 3 3 5 5 ";
+            string actual;
+            CustomList<int>.OperatorZip(odd, even);
+
+            //act
+            result = CustomList<int>.OperatorZip(odd, even);
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void ZipMethodTest_CombiningLists_DifferentSizeLists()
+        {
+            //arrange
+            CustomList<int> odd = new CustomList<int>();
+            odd.Add(1);
+            odd.Add(3);
+            odd.Add(5);
+            CustomList<int> even = new CustomList<int>();
+            even.Add(2);
+            even.Add(4);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "1 2 3 4 5 ";
+            string actual;
+            CustomList<int>.OperatorZip(odd, even);
+
+            //act
+            result = CustomList<int>.OperatorZip(odd, even);
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void ZipMethodTest_CombiningDifferentSizeLists_EvenIsBigger()
+        {
+            //arrange
+            CustomList<int> odd = new CustomList<int>();
+            odd.Add(1);
+            odd.Add(3);
+            CustomList<int> even = new CustomList<int>();
+            even.Add(2);
+            even.Add(4);
+            even.Add(6);
+            CustomList<int> result = new CustomList<int>();
+            string expected = "1 2 3 4 6 ";
+            string actual;
+            CustomList<int>.OperatorZip(odd, even);
+
+            //act
+            result = CustomList<int>.OperatorZip(odd, even);
+            actual = result.ToString();
+
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

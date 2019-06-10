@@ -32,19 +32,6 @@ namespace CustomListProject
                 testArray[i] = value;
             }
         }
-        private int one;
-        public int One
-        {
-            get { return one; }
-            set { one = value; }
-        }
-
-        private int two;
-        public int Two
-        {
-            get { return two; }
-            set { two = value; }
-        }
 
         private int count;
         public int Count
@@ -64,6 +51,7 @@ namespace CustomListProject
             count = 0;
             capacity = 6;
             testArray = new T[capacity];
+
         }
 
         public void Add(T item)
@@ -156,54 +144,60 @@ namespace CustomListProject
                 {
                     result.Remove(two[j]);
                 }
-                //if (two[i].Equals(one[i]))
-                //{
-                //    result.Remove(one[i]);
-                //}
             }
             return result;
         }
 
 
         //zip method operator overload
-        public static CustomList<T> operatorZip(CustomList<T> one, CustomList<T> two)
+        public static CustomList<T> OperatorZip(CustomList<T> list1, CustomList<T> list2)
         {
             CustomList<T> result = new CustomList<T>();
-            if (one.count < two.count)
+            if (list1.count == list2.count)
+            {
+                for (int i = 0; i < list1.count; i++)
+                {
+                    //use this to get result = 1 2 3 4 5 6; 
+                    result.Add(list1[i]);
+                    result.Add(list2[i]);
+                }
+            }
+
+            if (list1.count > list2.count)
             {
                 //use the count of list two to zip together
-                for (int i = 0; i < two.count; i++)
+                for (int i = 0; i < list1.count; i++)
                 {
-                    // only do this if 'i' is a valid index for list "one"
-                    result.Add(one[i]);
-
-                    result.Add(two[i]);
-                }
-            }
-            else
-            {
-                for (int i = 0; i < one.count; i++)
-                {
-                    result.Add(one[i]);
-
-                    // only do this if 'i' is a valid index for list "two"
-                    if (one.count < two.count)
+                    result.Add(list1[i]);
+                    if (i < list2.Count)
                     {
-                        result.Add(two[i]);
+                        result.Add(list2[i]);
                     }
-
                 }
             }
- 
+            if (list1.count < list2.count)
+            {
+                //use the count of list two to zip together
+                for (int i = 0; i < list2.count; i++)
+                {
+                    if (i < list1.Count)
+                    {
+                        result.Add(list1[i]);
+                    }
+                    result.Add(list2[i]);
+                }
+            }
             return result;
-
         }
+
 
         public void GetEnumerator()
         {
 
             throw new NotImplementedException();
         }
+
+
 
 
 
